@@ -16,5 +16,16 @@ const profs = [
     ['jean-denis', 'vauguet'],
     ['jean', 'pruliere']
 ];
+// Le principe est de découper la contruction
 
-console.table(profs);
+// 1. on commence par transformer le nom et le retourner
+console.table(profs.map(prof => prof[1].toUpperCase()));
+
+// 2. on fait la même opération mais en retournant l'objet complet ce coup si
+// On fait remarquer que cela a aussi changer le tableau contenu dans la variable "profs" ---> à cause des références
+console.table(profs.map(prof => {
+    prof[1] = prof[1].toUpperCase();
+    return prof;
+}));
+
+console.table(profs.map(a => [a[0], a[1].toUpperCase()]));

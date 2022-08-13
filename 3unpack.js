@@ -6,8 +6,12 @@
 
 let a = 'b', b = 'a';
 
-let temp = a;
-a = b;
-b = temp;
+// let temp = a;
+// a = b;
+// b = temp;
+
+({a, b} = {a : 'a', b : 'b'});
+//ou 
+// [a,b] = [b,a];
 
 console.table({a, b});

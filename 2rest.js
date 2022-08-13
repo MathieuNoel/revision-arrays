@@ -13,9 +13,9 @@ const data = [
     ['il faut que ', 'ça marche avec ', 'plus de 3 arguments aussi', ' ! CECI DOIT S\'AFFICHER']
 ];
 
-const makePlusEvenGreater = (a, b, c) => {
+const makePlusEvenGreater = ( ...data) => { //(a, b, c)
 
-    const args = [a, b, c];
+    // const args = [a, b, c];
     
     let result, arg;
     while (arg = args.shift()) {

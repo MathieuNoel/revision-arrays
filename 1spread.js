@@ -16,9 +16,17 @@ const makePlusGreatAgain = (a, b, c) => {
     return a + b + c;
 };
 
-for (let i = 0; i < data.length; i++) {
-    let set = data[i];
-    console.log(makePlusGreatAgain(set[0], set[1], set[2]));
-}
+// for (let i = 0; i < data.length; i++) {
+//     let set = data[i];
+//     console.log(makePlusGreatAgain(set[0], set[1], set[2]));
+// }
+
+for(let i = 0; i < data.length; i++) {
+    console.log(makePlusGreatAgain(...data[i]))
+};
 
 // bonus : modifier le for pour une écriture plus moderne, appropriée pour les arrays
+
+for (const set of data) {
+    console.log(makePlusGreatAgain(...set));
+}
